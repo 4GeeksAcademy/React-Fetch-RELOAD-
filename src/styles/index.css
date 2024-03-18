@@ -1,12 +1,31 @@
+body {
+    margin-top: 100px;
+    background-color: aqua;
+    font-family: "Fuzzy Bubbles", sans-serif;
+}
+.container {
+    background-color: rgb(250, 250, 120);
+    width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+}
 
-/* 
+ul {
+    padding: 0px;
+}
+ul li{
+    border-bottom: 1px solid black;
+    list-style: none;
+    padding: 5px;
+}
+input {
+    border: none;
+    width: 100%;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+button {
+    background-color: rgb(250, 250, 120);
+    border: none;
+    float: right;
+    color: red;
+}
