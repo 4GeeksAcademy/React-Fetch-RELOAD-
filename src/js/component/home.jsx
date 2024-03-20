@@ -5,7 +5,7 @@ const Home = () => {
   const [todos, setTodos] = useState([]);
 
   function createUser() {
-	fetch("https://playground.4geeks.com/apis/fake/todos/user/Juan123",{
+	fetch("https://playground.4geeks.com/apis/fake/todos/user/Juan1234",{
 	method: "POST",
 	body: JSON.stringify([]),
 	headers:{
@@ -18,7 +18,7 @@ const Home = () => {
 }
 
 function getInfo() {
-	fetch("https://playground.4geeks.com/apis/fake/todos/user/Juan123",{
+	fetch("https://playground.4geeks.com/apis/fake/todos/user/Juan1234",{
 	method: "GET"
   })
   .then((response)=>{
@@ -42,10 +42,9 @@ function getInfo() {
 
 function putInfo(todos) {
   console.log("Datos que se envían a la API:", todos);
-  let out = [...todos, { label: inputValue, done: false }]
-	fetch("https://playground.4geeks.com/apis/fake/todos/user/Juan123",{
+	fetch("https://playground.4geeks.com/apis/fake/todos/user/Juan1234",{
 	method: "PUT",
-	body: JSON.stringify(out),
+	body: JSON.stringify(todos),
 	headers:{
 		"Content-Type": "application/json"
 	}
@@ -60,7 +59,7 @@ function addTodos(enter) {
     if (enter.key === "Enter") {
       setTodos(todos.concat( { label: inputValue, done: false }))
       setInputValue("");
-      putInfo(todos.concat( { label: inputValue, done: false }));
+      putInfo(todos);
     }
 }
 
