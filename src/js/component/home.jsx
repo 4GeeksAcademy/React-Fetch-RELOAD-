@@ -57,9 +57,10 @@ function putInfo(todos) {
 
 function addTodos(enter) {
     if (enter.key === "Enter") {
+      const newTodos = todos.concat({ label: inputValue, done: false });
       setTodos(todos.concat( { label: inputValue, done: false }))
       setInputValue("");
-      putInfo(todos);
+      putInfo(newTodos);
     }
 }
 
